@@ -10,7 +10,8 @@
 (cffi:load-foreign-library "~/.local/lib/libtest.so")
 
 #|
-(cffi:load-foreign-library "/home/martin/.local/lib/libclcxx.so")
+
+(cffi:load-foreign-library "/home/martin/.local/lib/libClCxx.so")
 (cffi:load-foreign-library "/home/martin/.local/lib/libtest.so")
 
 (cxx:init)
@@ -20,10 +21,10 @@
 (cxx:add-package "TEST" "TEST")
 
 
-;(test:greet)
+(test:greet)
 
-;(test:hi "Cxx")
-;(test:test-float 12.34)
+(test:hi "Cxx")
+(test:test-float 12.34)
 
 (cxx::remove-c-package "TEST")
 (cxx:remove-package "TEST")
