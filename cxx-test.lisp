@@ -1,10 +1,10 @@
 (cl:when (not (cl:find-package "TEST"))
   (cl:make-package "TEST")
   (cl:use-package 'cl 'test))
+
 (cl:in-package :test)
 
 (import 'cxx::cxx-ptr)
-(export 'cxx-ptr)
 
 (progn
  (defclass ww
@@ -192,5 +192,19 @@
                                  (lambda () (destruct-ptr-xx cxx::ptr)))
        cxx::obj)))) 
 
-(export '(ww xx create-xx foo create-ww0 hi test-int greet test-float
-          test-complex ref-int ref-class y.get y.set foo create-xx2))
+(export '(cxx-ptr ww
+                  xx
+                  create-xx
+                  foo
+                  create-ww0
+                  hi
+                  test-int
+                  greet
+                  test-float
+                  test-complex
+                  ref-int
+                  ref-class
+                  y.get
+                  y.set
+                  foo
+                  create-xx2))
